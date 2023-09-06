@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Star War Showcase</title>
+</head>
+<body>
+    <div class="menu hover">
+        <div class="line1" id="line"></div>
+        <div class="line2" id="line"></div>
+    </div>
+
+    <div class="dropDownMenu">
+        <div class="dropDownOption1" id="dropDownOption">Home</div><br>
+        <div class="dropDownOption4" id="dropDownOption">Instagram</div><br>
+        <div class="dropDownOption3" id="dropDownOption">CodePen</div><br>
+        <div class="dropDownOption4" id="dropDownOption">Discord</div><br>
+        <div class="dropDownOption2" id="dropDownOption">GitHub</div><br>
+        <div class="dropDownOption4" id="dropDownOption">Reddit</div>
+    </div>
+
+    <section class="firstPage">
+        <video class="bg" playsinline autoplay muted loop>
+            <source src="assests/bg/bg.mp4" type="video/mp4">
+            <source src="assests/bg/bg.webm" type="video/webm">
+        </video>
+
+        <svg class="firstPage-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9.30078,14c-1.30078,0 -2.30078,1 -2.30078,2.40234c0,0.59766 0.19922,0.79688 0.30078,1c0.27734,0.50391 1.55859,2.59766 1.55859,2.59766c0.06641,0.09766 0.07813,0.16797 0.09766,0.30078c0.10156,0.39844 -0.19922,0.69922 -0.59766,0.69922h-6.35937v3h8.80078c1.30078,0 2.39844,-1 2.39844,-2.40234c0,-0.59766 -0.19922,-0.79687 -0.29687,-1l-1.66797,-2.59766c-0.05859,-0.07422 -0.10156,-0.19922 -0.10156,-0.30078c0,-0.39844 0.30078,-0.69922 0.69922,-0.69922h4.16797v7h4v-7h4v-3zM26.30078,14l-3.22266,10h3.22266l0.69922,-2h3.15234l0.69531,2h3.15234l-3.33203,-10zM35,14v10h3v-3.10937c0.65625,0.625 2.21875,2.10938 3,2.80859c0.09766,0.10156 0.39844,0.30078 0.79688,0.30078h6.20313v-3h-4.40234c-0.22656,0 -0.38672,-0.06641 -0.51953,-0.16016c-0.06641,-0.0625 -0.10937,-0.10156 -0.16016,-0.14844c1.22266,-0.54687 2.08203,-1.76953 2.08203,-3.19141c0,-1.92578 -1.57422,-3.5 -3.5,-3.5zM38,17h3c0.27734,0 0.5,0.22266 0.5,0.5c0,0.27734 -0.22266,0.5 -0.5,0.5h-3zM28.56641,17.40234l1.00781,2.59766h-1.875zM2.39844,27l3.33594,10h2.36719l1.57031,-4.55078l1.57422,4.55078h2.35156l3.33594,-10h-3.93359l-0.96875,2.90234l-0.96484,-2.90234h-3.46484l-1.05469,2.9375l-0.98047,-2.9375zM19.30078,27l-3.22266,10h3.22266l0.69922,-2h3.15234l0.69531,2h3.15234l-3.33203,-10zM28,27v10h3v-3.11328c0.65625,0.62109 2.22266,2.11328 3,2.8125c0.10156,0.10156 0.40234,0.30078 0.80078,0.30078h9.29688c1.30078,0 2.40234,-0.90234 2.40234,-2.40234c0,-0.59766 -0.19922,-0.79687 -0.30078,-1l-1.66797,-2.5c-0.03125,-0.06641 -0.09766,-0.19531 -0.09766,-0.29687c0,-0.39844 0.29688,-0.80078 0.59766,-0.80078h2.96875v-3h-5.69922c-1.30078,0 -2.39844,1.10156 -2.39844,2.5c0,0.60156 0.19531,0.80078 0.29688,1c0.28125,0.38281 1.80078,2.5 1.80078,2.5c0.04297,0.10156 0.09766,0.19922 0.09766,0.30078c0,0.39844 -0.29687,0.69922 -0.59766,0.69922h-4.90234c-0.17187,0 -0.30469,-0.04297 -0.41797,-0.10156c-0.08594,-0.09375 -0.15625,-0.16797 -0.21484,-0.23047c1.19531,-0.55859 2.03516,-1.76562 2.03516,-3.16797c0,-1.92578 -1.57422,-3.5 -3.5,-3.5zM31,30h3c0.27734,0 0.5,0.22266 0.5,0.5c0,0.27734 -0.22266,0.5 -0.5,0.5h-3zM21.56641,30.40234l1.00781,2.59766h-1.875z"></path></g></g>
+            </svg>
+    </section>
+
+    <div class="reelBar">
+        <div><span>Anakin Skywalker</span><span>Luke Skywalker</span><span>Han Solo</span><span>Obi-Wan Kenobi</span><span>Yoda</span><span>Princess Leia</span><span>R2-D2</span><span>Chewbacca</span><span>C-3PO</span><span>Ahsoka Tano</span><span>Darth Maul</span><span>Mace Windu</span><span>Emperor Palpatine</span><span>General Grievous</span><span>Rey</span><span>Padmé Amidala</span><span>Qui-Gon Jinn</span></div>
+
+        <div><span>Anakin Skywalker</span><span>Luke Skywalker</span><span>Han Solo</span><span>Obi-Wan Kenobi</span><span>Yoda</span><span>Princess Leia</span><span>R2-D2</span><span>Chewbacca</span><span>C-3PO</span><span>Ahsoka Tano</span><span>Darth Maul</span><span>Mace Windu</span><span>Emperor Palpatine</span><span>General Grievous</span><span>Rey</span><span>Padmé Amidala</span><span>Qui-Gon Jinn</span></div>
+    </div>
+    
+    <section class="secondPage">
+        <div class="slider-container"><div class="slider"></div></div>
+    </section>
+
+
+    <section class="thirdPage">
+        <div class="thirdImg">
+            <img src="assests/img/darkside.jpg" alt="Image">
+        </div>
+    </section>
+    
+
+    <div class="cursor"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

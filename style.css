@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: starwars;
+    src: url(assests/fonts/STJEDISE.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Disable ScrollBar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body{
+    background: #000;
+    color: #fff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+    /* Selection disables */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+/* ======= Nav ======= */
+
+.menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 30px 30px;
+    z-index: 30;
+    transition: .5s;
+}
+.menu::before {
+    content: '';
+    position: absolute;
+    top: var(--menuBgTop, -150px);
+    right: var(--menuBgLeft, -150px);
+    border-radius: 50%;
+    width: var(--menuBgWidth, 0px);
+    height: var(--menuBgHeight, 0px);
+    background-image: radial-gradient(white, grey);
+    opacity: .7;
+    filter: blur(4px);
+    z-index: -1;
+    transition: .5s;
+}
+.hover:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+
+#line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 6px;
+    transition: .8s;
+}
+
+.menu:hover #line{
+    background-color: black;
+}
+
+.dropDownMenu {
+    position: fixed;
+    top: 70px;
+    right: -150px;
+    text-align: right;
+    z-index: 50;
+    color: #000;
+    transition: .4s;
+}
+#dropDownOption {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 23px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+#dropDownOption:hover {
+    background: #000;
+    color: white;
+}
+
+/* ======= first page ======= */
+.firstPage {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    height: 100vh;
+}
+
+.firstPage svg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 100%;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Reel motion animation */
+.reelBar{
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    font-family: starwars;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.reelBar::-webkit-scrollbar {
+    display: none;
+}
+
+.reelBar div {
+    display: inline-block;
+    animation: reelMotion 50s linear infinite;
+}
+
+.reelBar span{
+    margin-left: 25px;
+}
+
+@keyframes reelMotion {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-110%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Second page */
+
+
+/* Third Page */
+.secondPage {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, black, #212121);
+    /* Disable ScrollBar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-container {
+    
+}
+
+.slider {
+    display: flex;    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    width: 380px;
+    height: 100%;
+}
+.card img {
+    bottom: 0;
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.charInfo {
+    position: relative;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px 0px;
+}
+.charInfo svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    animation: arrowMovement 2.5s infinite;
+
+}
+@keyframes arrowMovement {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -6px;
+    }
+}
+
+
+.thirdPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #212121, #282828);
+    height: 100vh
+}
+
+.thirdImg {
+    position: relative;
+    width: 90%;
+    z-index: 10;
+}
+.thirdImg img{
+    width: 100%;
+    border-radius: 20px;
+}
+.thirdImg::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: 0px;
+    background-color: transparent;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+/* Cursor Animation */
+.cursor {
+    display: none;
+    position: fixed;
+    z-index: 60;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 4px 4px 10px black;
+    mix-blend-mode: difference;
+    z-index: 100;
+    transition: .1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.reelBar:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(6);
+}
+
+@media screen and (min-width:500px) {
+    .card {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    body {
+        
+    }
+
+    /* Cursor Animation */
+    .cursor{
+        display: inline;
+    }
+}
+
+@media screen and (min-width:1500px) {
+    
+    .secondPage img {
+        width: 1350px;
+    }
+    .secondPage p {
+
+    }
+}
